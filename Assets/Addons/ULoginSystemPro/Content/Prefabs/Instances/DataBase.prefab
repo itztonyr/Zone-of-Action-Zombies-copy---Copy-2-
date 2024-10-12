@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &129652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422622}
+  - component: {fileID: 11427888}
+  m_Layer: 0
+  m_Name: DataBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 489, y: 259.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11427888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec6e3d7395bd64f802029f79229572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalUser:
+    ID: 0
+    LoginName:
+      currentCryptoKey: 
+      hiddenValue: 
+      cryptoKey: 9d00500007000e00b20091001300
+      hiddenChars: 
+      inited: 1
+      fakeValue: 
+      fakeValueActive: 0
+    NickName:
+      currentCryptoKey: 
+      hiddenValue: 
+      cryptoKey: 4a00000077003d0031003a004100
+      hiddenChars: 
+      inited: 1
+      fakeValue: 
+      fakeValueActive: 0
+    Kills:
+      currentCryptoKey: 1647610398
+      hiddenValue: 1647610398
+      inited: 1
+      fakeValue: 0
+      fakeValueActive: 1
+    Deaths:
+      currentCryptoKey: 1743299183
+      hiddenValue: 1743299183
+      inited: 1
+      fakeValue: 0
+      fakeValueActive: 1
+    Score:
+      currentCryptoKey: 1813992072
+      hiddenValue: 1813992072
+      inited: 1
+      fakeValue: 0
+      fakeValueActive: 1
+    Coins: []
+    PlayTime:
+      currentCryptoKey: 1407285851
+      hiddenValue: 1407285851
+      inited: 1
+      fakeValue: 0
+      fakeValueActive: 1
+    IP: 
+    SavedIP: 
+    metaData:
+      rawData:
+        WeaponsLoadouts: 
+        ClassKit: 0
+        Avatar: 0
+        CallingCard: 0
+    FriendList: []
+    authenticationType: 0
+    Clan:
+      ID: -1
+      Name: 
+      Tag: 
+      Score: 0
+      Date: 
+      Description: 
+      AllCanInvite: 1
+      isPublic: 1
+      SourceMembers: 
+      Members: []
+      ClanJoinRequests: 
+      MyInvitations: 
+    ShopData:
+      PurchasesSource: 
+      ShopPurchases: []

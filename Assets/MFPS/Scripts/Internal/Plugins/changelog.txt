@@ -1,0 +1,122 @@
+### -1.10.0
+
+#Adds:
+
+-ADDED: New weapon prefab system. Weapons are now instantiated at runtime instead of being included in each player prefab, reducing player prefab size by about 97% and requiring weapon integration only once for all players.
+-ADDED: Option to return to the waiting room after a match with the same players.
+-ADDED: Bots can now use the same player models as real player prefabs, eliminating the need for separate integration.
+-ADDED: Bots now use the same third-person weapon setups as player prefabs, removing the need for separate integration.
+-ADDED: Kill Assist feature, awarding points to players who assist in a kill and keeping track of the number of assists.
+-ADDED: Option in GameData to allow reloading while running.
+-ADDED: Option in GameData to show muzzle flash when firing while aiming.
+-ADDED: Flashbang grenades that can blind enemies within range and facing the detonation.
+-ADDED: Profanity word filter that replaces common profanity words with asterisks. Includes a database of over 2800 words, with the option to add more.
+-ADDED: Option in GameData to change default player class names.
+-ADDED: Two new weapon recoil modes: 'Random2D' and 'Pattern' recoil, in addition to the previous vertical recoil.
+-ADDED: Toggle or Hold options for crouch and sprint inputs in the in-game settings menu.
+-ADDED: Optional double jump to the player movement system.
+-ADDED: Effective Firing Range property for weapons, defining maximum damage within a set range, decreasing to minimum damage beyond that range.
+-ADDED: Audio Mixer for better in-game audio blending and more control over audio settings.
+-ADDED: Generic first-person weapon animations, allowing integration of first-person weapons without custom animations for each weapon.
+-ADDED: Support for first-person weapon empty reload animation, an optional animation that plays when reloading with zero ammo.
+-ADDED: AI Areas, an optional system that makes the bots play much more tactically by calculating enemy hot zones and play accordingly.
+-ADDED: MFPS Editor updater window for downloading and installing small MFPS patches directly from the editor.
+-ADDED: Two new spawn point selection modes: 'Farthest' (spawns at the farthest point from all players) and 'Freest' (spawns at the least crowded point).
+-ADDED: Option in GameData to define available Photon PUN server regions.
+-ADDED: Room creation option to create matches with only one type of weapon allowed (e.g., Sniper Only, Pistol Only).
+-ADDED: Editor overlay toolbar for easily previewing first-person/third-person weapons, accessing the MFPS Manager window, or quickly opening an MFPS scene.
+-ADDED: Support for first-person weapons with multiple animators (e.g., one for the weapon and another for the arms)
+
+# Improvements
+
+-IMPROVED: Change IGameMode Interface with bl_GameModeBase abstract class to make it easier to create new game modes and allow write much cleaner code in inherited scripts.
+-IMPROVED: Enhanced the 'Match Over' UI design and made it more modular and easy to customize.
+-IMPROVED: Enhanced the custom inspector of bl_Gun.cs to make it easier to modify the weapon properties.
+-IMPROVED: Enhanced the first person motion and transitions improving the overall game feel.
+-IMPROVED: Kill Cam 'Observe Death' mode camera placement and now the camera tracks the player ragdoll.
+-IMPROVED: Kill Cam 'Orbit' mode, now is possible to change the spectated player with the right mouse click.
+-IMPROVED: Kill Cam 'Orbit' mode, now the camera will automatically change the spectated player when the current spectated player dies.
+-IMPROVED: Add more properties to the player name-plate drawer to allow change the health bar width and position offset.
+-IMPROVED: Now is possible to set up spawn points for specific game modes from the inspector of the bl_SpawnPoint component.
+-IMPROVED: Now the eliminations are verified and confirmed by the Master Client, this will prevent some unsynced eliminations issues.
+-IMPROVED: Improved spawn point position calculation algorithm to reduce player spawn overlaps.
+-IMPROVED: Now can override the default spawn point selection mode per Game Mode.
+-IMPROVED: Enhanced the local kill notification animation and UI aspect ratio.
+-IMPROVED: Now bots can throw flash grenades.
+-IMPROVED: Now bots can hold positions and take tactical long-range shots to the enemy.
+-IMPROVED: Improved the overall bots behavior, player detection, and decision-making.
+-IMPROVED: Enhanced the bots movement animation blend.
+-IMPROVED: Now bots support Sniper, bots using snipers will behave slightly differently than bots using other weapons.
+-IMPROVED: Significantly improved the bots performance while introducing new features.
+-IMPROVED: Support for the spectator camera movement in mobile devices.
+-IMPROVED: Friendly Fire option doesn't longer show in the room creator menu if the game mode is one of the FFA modes.
+-IMPROVED: The text size setting in the tutorials editor window now applies uniformly to all text within the window.
+-IMPROVED: Made easier to add custom item drops prefabs.
+-IMPROVED: Player Scoreboard UI responsiveness across all screens aspect ratios.
+-IMPROVED: Smoother leg animations during idle turns due to improved turn angle calculation.
+-IMPROVED: Added sniper bold reload animation to the player third person sniper fire animation.
+-IMPROVED: Updated included Photon PUN last version (2.43)
+-IMPROVED: Cleaned some core scripts and removed unused or redundant code.
+-IMPROVED: Gamepad pointer movement is now smoother and more accurate.
+-IMPROVED: The weapon fire mode is now much intuitive and easy to setup in the inspector of the bl_Gun.
+-IMPROVED: Now the procedural fp weapon movement is applied to a custom pivot, which result in a more smooth and realistic movement.
+-IMPROVED: Now the player controller goes up/down stairs much more smoothly without getting stuck.
+-IMPROVED: Add more random decision to the bots for less predictable behavior.
+-IMPROVED: Now bots arms are controlled by IK to aim to the target with the weapon rather than having a default animation arms position.
+-IMPROVED: The target in-sight detection algorithm of the bots, now the vision area is visible in the editor when select a bot.
+-IMPROVED: Player third person upper body sprint animation now sync better with the lower body movement.
+-IMPROVED: Add option to define a custom third person aim position for an specific weapon.
+-IMPROVED: Auto generated fp weapon animator controller transitions.
+-IMPROVED: Added foley sounds to crouch and aim player movement.
+-IMPROVED: Made room UI more modular and customizable.
+-IMPROVED: Enhanced the Kill Zone UI design.
+-IMPROVED: Add option to hide the teammates position icon above the head after a defined distance from the local player.
+-IMPROVED: Now in FFA players will spawn in the farthest spawn point from all players to avoid spawn killing.
+-IMPROVED: Add option to stop the breathing movement when the player is aiming with a sniper when press the (default) Left Ctrl key.
+-IMPROVED: Make the waiting room player list modular so it can be easily customized or replaced.
+-IMPROVED: Add team icons, you can assign a custom icon for each team in the GameData.
+-IMPROVED: Made the game player data save system abstractable to allow easily replace it with a custom save system.
+-IMPROVED: Molotov splash explosion, now the the flames will follow moving objects, improved the visuals and fade in/out effect.
+-IMPROVED: Made easier to add new bullet hit particles effects defined by tags.
+-IMPROVED: Added option in the game mode settings to set unlimited time for the match, the match will end when the score limit is reached or defined by the game mode.
+-IMPROVED: Added option in the game mode settings to unlist the room from the room list when the match starts.
+-IMPROVED: Made the GameData property settings modular to make easier to have multiple profiles for quick prototyping and testing.
+-IMPROVED: Added a 'power score' value in each weapon in the MFPS Manager window > Weapons tab, this value is used to calculate the weapon power score based on the weapon properties, you can use it to balance the weapons.
+-IMPROVED: Added option in the game mode settings to override the kill cam view mode per game mode.
+-IMPROVED: Jump Pad, now you can define the jump force and the direction of the jump.
+
+# Fixes
+
+-FIX: Players can join to private rooms using the auto-matchmaking.
+-FIX: Knife swoosh sound range is the same as other weapon fire sound range.
+-FIX: Small camera zoom out jump when is aiming and start reloading the weapon.
+-FIX: Uncast Exception that happen randoly on the waiting room.
+-FIX: Unsync issue that happens rarely which causes the eliminated player to turn invisible (but still alive) for some players.
+-FIX: Weird weapon movement when aiming in and out quickly.
+-FIX: Room chat only shows the 4 oldest messages.
+-FIX: Score doesn't increase when eliminate a real player or bot in FFA game mode.
+-FIX: Rooms in the room list don't show after returning from the Customizer or Class Customization scene to the MainMenu scene.
+-FIX: Camera rotation jump that happens when the player finish sliding and the camera is moving.
+-FIX: Player ground detection issue that happens in the editor when unfocus the game and focus in another editor window.
+-FIX: Multiple Fire sounds played for local rifle and pistols.
+-FIX: Room password window keep showing after join to a room with password.
+-FIX: Gamepad pointer doesn't show when the match finish.
+-FIX: Items lock by level didn't unlock when the player level up to the required level but a level after that.
+-FIX: Bots target themself after inflicting self-damage with a grenade.
+-FIX: Killfed shows the first weapon icon instead of the Molotov icon when eliminate a player with a Molotov.
+-FIX: Molotov doesn't apply the damage defined in the Weapon Info in GameData but the default damage of the projectile prefab.
+-FIX: Wrong localization text in the leave room confirmation window in the Waiting Room.
+-FIX: Replaced bots data is deleted when a real player joins to the room instead of when gets eliminated, causing some issues with some game modes.
+-FIX: 'Respawn In...' text shows in the kill cam UI for game modes where the player doesn't spawn after the interval of time.
+-FIX: bl_Gun > Lag Between Burst was not working properly.
+-FIX: Quick fire Grenade and Knife third person animation were not working.
+-FIX: The gamepad pointer appears outside of the screen view.
+-FIX: Eliminating a bot with an explosive sometimes was incorrectly registered as a headshot.
+-FIX: FP Sniper and Shotgun weapon animations were broken when use Animator and custom movement animations.
+-FIX: Error when open the MFPS tutorial editor windows on Unity 2022.1++ using URP or HDRP.
+-FIX: When a bot kill the local player, the bot color in the killfeed text appears with the local player team color.
+-FIX: Throwing and picking up more than two med kits or ammo kits causes a missing reference execption.
+-FIX: Exception throw when remote players reload snipers or shotguns.
+-FIX: Issue that cause all bots at the same time, stop abruptly when they are moving and start moving again.
+-FIX: Bots were looking at the target through the ceiling when the target is above them in multi-floor maps.
+-FIX: Grenades and Molotovs were being throw from the fp fire point instead of the tp fire point in Third Person mode.

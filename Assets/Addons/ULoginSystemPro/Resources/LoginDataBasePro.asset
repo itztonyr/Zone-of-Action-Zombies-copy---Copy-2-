@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55a2495e855d4b42af31d8d4a657ed7, type: 3}
+  m_Name: LoginDataBasePro
+  m_EditorClassIdentifier: 
+  PhpHostPath: http://tggzoaz.mygamesonline.org/mygame/php/
+  SecretKey: 123456
+  OnLoginLoadLevel: MainMenu
+  CheckGameVersion: 0
+  PeerToPeerEncryption: 0
+  ForceLoginScene: 1
+  allowPlayAsGuest: 1
+  DetectBan: 1
+  RequiredEmailVerification: 0
+  usePhotonAuthentication: 0
+  CanRegisterSameEmail: 0
+  checkInternetConnection: 1
+  BanComprobationInMid: 0
+  PlayerCanChangeNick: 1
+  UpdateIP: 1
+  FilterUserNames: 1
+  showStatusPrefix: 1
+  FullLogs: 1
+  maxNickNameLenght: 16
+  MinPasswordLenght: 5
+  maxLoginAttempts: 5
+  waitTimeAfterFailAttempts: 180
+  CheckBanEach: 60
+  banMethod: 2
+  afterLoginBehave: 0
+  rememberMeBehave: 1
+  roles:
+  - RoleName: Normal User
+    RoleKey: default
+    RoleColor: {r: 1, g: 1, b: 1, a: 0.9843137}
+    InsertRoleInNickName: 0
+    HasModerationRights: 0
+  - RoleName: Admin
+    RoleKey: admin
+    RoleColor: {r: 0.78431374, g: 0.09411765, b: 0.16862746, a: 1}
+    InsertRoleInNickName: 1
+    HasModerationRights: 1
+  - RoleName: Moderator
+    RoleKey: moderator
+    RoleColor: {r: 0.09411765, g: 0.47843137, b: 0.78431374, a: 1}
+    InsertRoleInNickName: 1
+    HasModerationRights: 1
+  - RoleName: Banned
+    RoleKey: banned
+    RoleColor: {r: 1, g: 0, b: 0.048927307, a: 1}
+    InsertRoleInNickName: 1
+    HasModerationRights: 0
+  - RoleName: VIP
+    RoleKey: vip
+    RoleColor: {r: 1, g: 0.86289185, b: 0, a: 1}
+    InsertRoleInNickName: 1
+    HasModerationRights: 0
+  pHPClassNames:
+  - Key: login
+    ScriptName: bl_Login
+  - Key: register
+    ScriptName: bl_Register
+  - Key: database
+    ScriptName: bl_DataBase
+  - Key: admin
+    ScriptName: bl_Admin
+  - Key: account
+    ScriptName: bl_Account
+  - Key: ranking
+    ScriptName: bl_Ranking
+  - Key: init
+    ScriptName: bl_Init
+  - Key: banlist
+    ScriptName: bl_BanList
+  - Key: support
+    ScriptName: bl_Support
+  - Key: creator
+    ScriptName: bl_DatabaseCreator
+  - Key: clan
+    ScriptName: bl_Clan
+  - Key: shop
+    ScriptName: bl_Shop
+  - Key: security
+    ScriptName: bl_Security
+  - Key: oauth
+    ScriptName: bl_OAuth
+  - Key: news
+    ScriptName: bl_News
+  - Key: voucher
+    ScriptName: bl_Voucher

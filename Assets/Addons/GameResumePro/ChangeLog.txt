@@ -1,0 +1,30 @@
+Game Resume Pro addon for MFPS
+Version 1.2.0
+
+Change Logs:
+
+1.2.0
+Compatibility with MFPS 1.10.0
+
+1.1.4
+Fix: Wrong calculation of the player level.
+Fix: Wring calculation of the relative score needed for next level.
+Fix: If the player doesn't reach a new level, the level progression bar will always show the 100% of completion.
+
+1.1.3
+Fix: Error in some game modes when show the game resume that prevent to return to the lobby automatically.
+Tweak: Scoreboard UI.
+
+1.1.2
+Change: Add compatibility with MFPS 1.9.2 changes.
+
+1.1.1
+Fix: Team Name text in scoreboards doesn't get updated with the real team name.
+
+1.1.0
+Compatibility with MFPS 1.9
+Improve: Use TextMeshPro instead of UGUI
+Fix: MissingReference exception when click an unlock button.
+
+Version 1.0
+Initial Release

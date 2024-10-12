@@ -1,0 +1,55 @@
+Basic Instructions on how to use the addon, and some basic stuff on how to chnage:
+
+
+----Setup----
+
+1.In the Zombies Folder Deag and Drop the "Zombies" prefab in the "GameMode" prefab
+
+
+----Changing Basics----
+
+-Perks
+
+1.All of Perk prefabs are located in the: Zombies>Prefabs and editing them from prefab mode is the best option
+
+2.To Adjust The Effects of Perks go to: Zombies>Extras>Scripts>Resources and there you can find scriptable objects with adjustable values
+
+-Mystery Box
+
+1.Mystery Box can be adjusted in the: Zombies>Prefabs and all values are preset there as well as the drops that mystery box can give
+
+-Zombies
+
+1.This one isnt soo easy, but you have to drag and drop in your new Fbx model of the zombies, and transfer over all the scripts with the values of the old one, then you can add it in the Spawn Manager
+
+-Animator
+
+1.You can change the animator by duplicating the original one located at: Zombies>Extras>Animators>Zombie and replace the animations with your own ones, then add that new animator to the zombies
+
+-Wall Weapons
+
+1.To Adjust Wall Weapons go to: Zombies>Prefabs>WallWeapon and you can drag in a prefab to your scene and adjust stuff like its image price etc
+
+-GobbleGums
+
+1.To Edit Gobblegums, you will need to go to: Zombies>Extras>Scripts>Resources where you can find gobble gum loadout, to add a new loadout simply left click and Create>Zombies>GobbleGum, adjust its settings and if you want it to be a option for gobblegums to drop add it in the gobblegum loadout slot
+
+
+"Make Sure Everything is referenced othervise there might be some network issues!"
+
+
+
+----Basic Prefab Locations----
+
+Spawn Manager = Zombies>Content>Spawners
+
+Spawn Points = Zombies>Content>Spawners>SpawnPoint (make sure to add/remove the spawnpoints from the spawn manager if you added/removed some of them)
+
+Round End Camera = Zombies>Content>Extras>Camera
+
+Map Related Stuff (Perks, Mystery Boxes, Walls etc) = Zombies>Content>Map
+
+UI = Zombies>Content>UI
+
+
+

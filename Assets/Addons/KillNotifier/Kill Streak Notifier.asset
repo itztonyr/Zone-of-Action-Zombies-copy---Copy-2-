@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a776487618c5eca41bfe2a54260297f7, type: 3}
+  m_Name: Kill Streak Notifier
+  m_EditorClassIdentifier: 
+  Name: Kill Streak Notifier
+  Version: 1.5.0
+  MinMFPSVersion: 1.10.0
+  Instructions: "<b>Get Started:\r</b>\n\r\n\u25A0 Import the package into your MFPS
+    2.0 project.\r\n\n\u25A0 Enable the addon in <i><size=8>(Top editor menu)</size></i>
+    MFPS -> Addons -> Kill Notifier -> Enable.\r\n\n\u25A0 For integrate in a scene,
+    open the map scene, then go to <i><size=8>(Top editor menu)</size></i> MFPS ->
+    Addons -> Kill Notifier -> Integrate -> save the scene. You need to do this in
+    each map scene.\r\n\n<b>Add New streaks:\r</b>\n\n- You can add more kill streaks
+    in KillNotifierData -> KillStreaks, which is located in the Resources folder
+    of the addon:\r\n  <i>Assets -> Addons -> KillNotifier -> Resources -> <b>KillNotifierData</b></i>,
+    add a new field to the list and set the require info."
+  TutorialScript: 

@@ -1,0 +1,137 @@
+in bl_FirstPersonController add:
+
+public bool OwnsRevive;
+
+///in bl_GunManager add:
+
+
+
+public AudioClip DrinkAudioClip;
+public Animator animatorDrink;
+public bool useHideAnimationDrink;
+public GameObject Drink;
+
+
+
+// change the void: (around line 737) to this
+
+
+public void AddWeaponToSlot(int slot, bl_Gun weapon, bool addSlotIfNotExist = false)
+
+//Now add these voids:
+
+
+
+void PlayDrinkAudio()
+    {
+       ASource.clip = DrinkAudioClip;
+       ASource.Play();
+    }
+
+  public void Drinking()
+  {
+      if (Drink != null)
+      {
+          Drink.SetActive(true);
+          PlayDrinkAudio();
+          animatorDrink.Play("Drink");
+      }
+
+  }
+  public void StopDrink()
+  {
+      if (Drink != null)
+      {
+          if (useHideAnimationDrink)
+          {
+              animatorDrink.Play("HideDrink");
+          }
+          Drink.SetActive(false);
+          ASource.Stop();
+      }
+  }
+
+
+
+///In bl_GunManagerEditor in OnInspectGUI void add:
+
+
+
+ GUILayout.BeginVertical("box");
+script.Drink = EditorGUILayout.ObjectField("Drink Model", script.Drink, typeof(GameObject), allowSceneObjects) as GameObject;
+script.DrinkAudioClip = EditorGUILayout.ObjectField("Drink Audio", script.DrinkAudioClip, typeof(AudioClip), allowSceneObjects) as AudioClip;
+script.animatorDrink = EditorGUILayout.ObjectField("Drink Animator", script.animatorDrink, typeof(Animator), allowSceneObjects) as Animator;
+script.useHideAnimationDrink = EditorGUILayout.Toggle("Drink Hide Animation?", script.useHideAnimationDrink);
+GUILayout.EndVertical();
+
+
+
+
+///In bl_GunManager replace the void BlockAllWeapons with:
+
+
+public void BlockAllWeapons()
+    {
+
+        foreach (bl_Gun g in PlayerEquip)
+        {
+            if (PlayerEquip == null) continue;
+            if (g == null) continue;
+            g.gameObject.SetActive(false); 
+        }
+        bl_CrosshairBase.Instance.Show(false);
+        bl_CrosshairBase.Instance.Block = true;
+        CanSwich = false;
+        playerReferences.playerNetwork.SetWeaponBlocked(1);
+    }
+
+
+
+///In Same script replce:
+
+         void SetupLoadout()
+with:    
+         public void SetupLoadout()
+
+
+
+
+
+
+
+
+
+///Fixes
+
+for bl_Gun fixes:
+
+add:
+    public float extraFireRate = 0;
+
+  public float FireRate
+    {
+        get { return Info.FireRate + extraFireRate; }
+        set { extraFireRate = value; }
+    }
+
+change:
+    private float extraReloadTime = 0;
+//to
+    public float extraReloadTime = 0;
+
+
+
+
+
+
+
+
+///Extra Settings
+
+///One Team Mode
+in bl_PhotonHelper
+go to the public bool isOneTeamMode
+around line 280
+and add:
+ if (m == GameMode.ZOM) { b = true; }
+.

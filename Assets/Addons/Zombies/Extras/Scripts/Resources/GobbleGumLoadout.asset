@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d91d1bd24356844a9f902c697ea868, type: 3}
+  m_Name: GobbleGumLoadout
+  m_EditorClassIdentifier: 
+  gobblegums:
+  - {fileID: 11400000, guid: f5d5adc8bd5d06d41b8de070bfee6d67, type: 2}
+  - {fileID: 11400000, guid: b857f53972665624c83dc8e241e413ce, type: 2}
+  - {fileID: 11400000, guid: 5b6b650e2f3a16f42bf0bac6a3dd09e8, type: 2}
+  - {fileID: 11400000, guid: 611182d0b88e3624cb5a7d7eec5c6efa, type: 2}

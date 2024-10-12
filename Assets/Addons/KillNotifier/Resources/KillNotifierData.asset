@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819df72b73e79644cac6b827d29b6f0b, type: 3}
+  m_Name: KillNotifierData
+  m_EditorClassIdentifier: 
+  KillsStreaks:
+  - KillName: First
+    ExtraScore: 0
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: a9844f09040a5204aa10bb5adec88577, type: 3}
+    KillClip: {fileID: 8300000, guid: fc333a9753078f44dbbf87d5ac88ff08, type: 3}
+  - KillName: Double
+    ExtraScore: 10
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: 6776e58487875d44490855265a381236, type: 3}
+    KillClip: {fileID: 8300000, guid: 890c90c9dbbe11c46a1a7947a4783bd9, type: 3}
+  - KillName: Multi Kill
+    ExtraScore: 15
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: 95dc5ecad6acae249ba7104c210260d2, type: 3}
+    KillClip: {fileID: 8300000, guid: bb8ff0d42b4392e4eacbaed6a87149a3, type: 3}
+  - KillName: Rambo
+    ExtraScore: 20
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: c5113861f2da9d747b5a973eb2393e0c, type: 3}
+    KillClip: {fileID: 8300000, guid: 18b5bd094eb5b894889d87d18a829bb5, type: 3}
+  - KillName: Fantastic
+    ExtraScore: 25
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: 6bf23bd1c4ba8c44397c3bde8e7f6492, type: 3}
+    KillClip: {fileID: 8300000, guid: 0b0ddfc22dca787439f5a932d99ecbbb, type: 3}
+  - KillName: Unbelievable
+    ExtraScore: 30
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: 2515ca42caa16af49991bd427d2a88ac, type: 3}
+    KillClip: {fileID: 8300000, guid: f664bd1e085050c48baa59427b01fbc6, type: 3}
+  - KillName: Dominion
+    ExtraScore: 50
+    Skip: 0
+    KillIcon: {fileID: 21300000, guid: 78f64b0604f0e9348ac4a605b39bb0c5, type: 3}
+    KillClip: {fileID: 8300000, guid: 9ac7dcf094c881a49bb1777b769f02d7, type: 3}
+  specialNotifications:
+  - key: headshot
+    info:
+      KillName: Headshot
+      ExtraScore: 50
+      Skip: 0
+      KillIcon: {fileID: 21300000, guid: f97fbfb1cb125c540a97a1a6887a0f34, type: 3}
+      KillClip: {fileID: 8300000, guid: d6a42f37f155278468d6ce0d10c6d919, type: 3}
+  - key: revenge
+    info:
+      KillName: Revenge
+      ExtraScore: 50
+      Skip: 0
+      KillIcon: {fileID: 21300000, guid: 78f64b0604f0e9348ac4a605b39bb0c5, type: 3}
+      KillClip: {fileID: 8300000, guid: d6a42f37f155278468d6ce0d10c6d919, type: 3}
+  - key: long-shot
+    info:
+      KillName: Long Shot
+      ExtraScore: 50
+      Skip: 0
+      KillIcon: {fileID: 21300000, guid: 6f72a07bf2a628c459bc2631c5d78966, type: 3}
+      KillClip: {fileID: 8300000, guid: d6a42f37f155278468d6ce0d10c6d919, type: 3}
+  - key: melee-kill
+    info:
+      KillName: Melee Kill
+      ExtraScore: 50
+      Skip: 0
+      KillIcon: {fileID: 21300000, guid: 7cedf98f7f5fa0648b47ad5147444706, type: 3}
+      KillClip: {fileID: 8300000, guid: d6a42f37f155278468d6ce0d10c6d919, type: 3}
+  - key: comeback
+    info:
+      KillName: Comeback
+      ExtraScore: 50
+      Skip: 0
+      KillIcon: {fileID: 21300000, guid: d5ca2332b73656848a4c9553df1209a8, type: 3}
+      KillClip: {fileID: 8300000, guid: d6a42f37f155278468d6ce0d10c6d919, type: 3}
+  TimeToShow: 3.5
+  timeBetweenSpecialBadge: 0.4
+  volumeMultiplier: 1
+  longShotDistanceThreshold: 50
+  OverrideOnNewStreak: 1
+  prioretizeHeadShotNotification: 0
+  killNotifierTextType: 1
+  killCountFormat: '{0} Kill'

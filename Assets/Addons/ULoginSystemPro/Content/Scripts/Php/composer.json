@@ -1,0 +1,14 @@
+{
+    "name": "lovatto/ulogin",
+    "description": "ULogin Pro PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lovatto Studio"
+        }
+    ],
+    "require": {
+        "phpseclib/phpseclib": "~2.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
